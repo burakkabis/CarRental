@@ -29,20 +29,20 @@ namespace ConsoleUI
                 //Arabayı kiralama imkanını kodlayınız. Rental-->Add
                 //Arabanın kiralanabilmesi için arabanın teslim edilmesi gerekmektedir.
 
-                DateTime date3 = new DateTime(2022, 9, 11);
-                DateTime date4 = new DateTime(2022, 9, 12);
+                //DateTime date3 = new DateTime(2022, 9, 11);
+                //DateTime date4 = new DateTime(2022, 9, 12);
 
 
-                Rental rental3 =new Rental();
-                rental3.CarId = 103;
-                rental3.CustomerId = 101;
-                rental3.RentDate = date3;
-                rental3.ReturnDate = date4;
+                //Rental rental3 =new Rental();
+                //rental3.CarId = 103;
+                //rental3.CustomerId = 101;
+                //rental3.RentDate = date3;
+                //rental3.ReturnDate = date4;
 
 
 
-                RentalManager rentalManager = new RentalManager(new EfRentalDal());
-                rentalManager.Add(rental3);
+                //RentalManager rentalManager = new RentalManager(new EfRentalDal());
+                //rentalManager.Add(rental3);
 
 
 

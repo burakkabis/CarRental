@@ -34,6 +34,19 @@ namespace Business.Constants
         public static string RentalAdded = "Rental added";
         public static string RentalsListed = "Rentals listed";
 
+        public static string CreditCardUpdated = "CreditCard updated";
+        public static string CreditCardlDeleted = "CreditCard deleted";
+        public static string CreditCardAdded = "CreditCard added";
+        public static string CustomersCardsListed = "The customer's credit cards have been listed.";
+
+
+
+
+
+
+
+
+
         public static string AuthorizationDenied= "Authorization denied.";
 
         public static string MaintenanceTime = "The system is in maintenance.";

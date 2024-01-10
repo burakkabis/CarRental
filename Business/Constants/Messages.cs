@@ -10,21 +10,32 @@ namespace Business.Constants
     //Static:Surekli newlemememizi sagliyor.
     public static class Messages
     {
-        public static string CarAdded = "Araba eklendi";
-        public static string CarNameInvalid = "Araba ismi geçersiz";
-        public static string MaintenanceTime = "Sistem bakımda";
-        public static string CarsListed = "Arabalar listelendi";
-        public static string CarAlreadyRented ="Araba zaten kiralandi";
-        public static string CarDeleted = "Arac silindi.";
-        public static string CarUpdated = "Arac guncellendi.";
-        public static string BrandAdded = "Marka eklendi";
-        public static string BrandDeleted ="Marka silindi";
-        public static string BrandUpdated ="Marka guncellendi";
-        public static string BrandsListed = "Markalar listelendi";
-        public static string ColorUpdated = "Renk guncellendi";
-        public static string ColorDeleted = "Renk silindi";
-        public static string ColorAdded = "Renk eklendi.";
-        public static string ColorsListed = "Renkler listelendi";
-        public static string AuthorizationDenied="Yetkiniz yok.";
+        public static string CarAdded = "Car added";     
+        public static string CarDeleted = "Car deleted.";
+        public static string CarUpdated = "Car updated.";
+        public static string CarsListed = "Cars listed";
+        public static string CarNameInvalid = "Car name is invalid";
+
+
+
+        public static string BrandAdded = "Brand listed";
+        public static string BrandDeleted = "Brand deleted";
+        public static string BrandUpdated = "Brand updated";
+        public static string BrandsListed = "Brands listed";
+
+
+        public static string ColorUpdated = "Color updated";
+        public static string ColorDeleted = "Color deleted";
+        public static string ColorAdded = "Color listed.";
+        public static string ColorsListed = "Colors listed";
+
+        public static string RentalUpdated = "Rental updated";
+        public static string RentalDeleted = "Rental deleted";
+        public static string RentalAdded = "Rental added";
+        public static string RentalsListed = "Rentals listed";
+
+        public static string AuthorizationDenied= "Authorization denied.";
+
+        public static string MaintenanceTime = "The system is in maintenance.";
     }
 }

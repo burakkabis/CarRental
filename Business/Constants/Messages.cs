@@ -29,6 +29,12 @@ namespace Business.Constants
         public static string ColorAdded = "Color listed.";
         public static string ColorsListed = "Colors listed";
 
+        public static string UserUpdated = "User updated";
+        public static string UserDeleted = "User deleted";
+        public static string UserAdded = "User listed.";
+        public static string UsersListed = "Users listed";
+
+
         public static string RentalUpdated = "Rental updated";
         public static string RentalDeleted = "Rental deleted";
         public static string RentalAdded = "Rental added";
@@ -39,6 +45,7 @@ namespace Business.Constants
         public static string CreditCardAdded = "CreditCard added";
         public static string CustomersCardsListed = "The customer's credit cards have been listed.";
 
+        public static string PaymentAdded = "Payment added.";
 
 
 

@@ -1,8 +1,11 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +24,7 @@ namespace Business.Concrete
         }
 
 
-
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
             _rentalDal.Add(rental);
@@ -48,10 +51,14 @@ namespace Business.Concrete
 
         public IDataResult<Rental> GetById(int id)
         {
-            var result = _rentalDal.Get(r=>r.Id==id);
+            var result = _rentalDal.Get(r=>r.RentalId==id);
             return new SuccessDataResult<Rental>(result);
         }
 
-      
+        public IDataResult<List<RentalDetailDto>> GetRentalDetails()
+        {
+            var result = _rentalDal.GetRentalDetails();
+            return new SuccessDataResult<List<RentalDetailDto>>(result,Messages.RentalDetailsListed);
+        }
     }
 }

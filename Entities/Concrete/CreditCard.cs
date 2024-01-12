@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class CreditCard:IEntity
     {
-        public int Id { get; set; }
+        public int CreditCardId { get; set; }
         public int CustomerId { get; set; }
         public string NameSurname { get; set; }
         public string CardNo { get; set; }

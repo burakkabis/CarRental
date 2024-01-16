@@ -2,6 +2,7 @@
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
+using Core.Utilities.BusinessRules;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -27,6 +28,11 @@ namespace Business.Concrete
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental rental)
         {
+            var result=BusinessRules.Run(CarAvailabiltyCheck(rental));
+            if (result != null)
+            {
+                return result;
+            }
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentalAdded);
         }
@@ -59,6 +65,24 @@ namespace Business.Concrete
         {
             var result = _rentalDal.GetRentalDetails();
             return new SuccessDataResult<List<RentalDetailDto>>(result,Messages.RentalDetailsListed);
+        }
+
+
+        //BUSINESS RULES METHODS
+        private IResult CarAvailabiltyCheck(Rental rental)
+        {
+            var overlappingDateList = _rentalDal.GetRentalDetails(r => r.CarId == rental.CarId
+            && r.RentDate < rental.ReturnDate
+            && r.ReturnDate > rental.RentDate);
+            if (overlappingDateList.Count() == 0)
+            {
+                return new SuccessResult();
+            }
+            else
+            {
+                return new ErrorResult(Messages.CarIsAlreadyRented);
+            }
+
         }
     }
 }

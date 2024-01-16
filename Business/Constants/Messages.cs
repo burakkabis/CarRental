@@ -15,6 +15,8 @@ namespace Business.Constants
         public static string CarUpdated = "Car updated.";
         public static string CarsListed = "Cars listed";
         public static string CarNameInvalid = "Car name is invalid";
+        public static string CarIsAlreadyRented = "Car is already rented";
+
 
 
 
